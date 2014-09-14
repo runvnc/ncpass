@@ -4,6 +4,8 @@
 # start.bash
 #
 
+echo "Top of start."
+
 HAPROXY="/etc/haproxy"
 OVERRIDE="/haproxy-override"
 PIDFILE="/var/run/haproxy.pid"
@@ -27,3 +29,7 @@ if [[ -f "$OVERRIDE/$CONFIG" ]]; then
 fi
 
 haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
+
+echo "Should be running:"
+
+ps aux
