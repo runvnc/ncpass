@@ -10,6 +10,8 @@ ADD haproxy.cfg /etc/haproxy/haproxy.cfg
 # Add files.
 ADD start.bash /haproxy-start
 
+ADD . /opt/localserver
+
 # Define mountable directories.
 VOLUME ["/data", "/haproxy-override"]
 
